@@ -1,10 +1,10 @@
-# 📦 Props Usage in the Project
+# Props Usage in the Project
 
 This project uses **React + TypeScript** components with customizable props to ensure flexibility, reusability and clean separation of concerns. Below is a summary of the props implemented in the component and their purpose.
 
 ---
 
-## 🔹 `promoBanner.tsx` Component
+## `promoBanner.tsx` Component
 
 Displays a promotional card with image, text, and a call-to-action button.
 
@@ -24,7 +24,7 @@ Displays a promotional card with image, text, and a call-to-action button.
 
 
 
-## 💡 Why Props Matter
+## Why Props Matter
 
 Props allow components to be:
 
