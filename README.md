@@ -12,7 +12,6 @@ Displays a promotional card with image, text, and a call-to-action button.
 
 | Prop Name       | Type       | Description |
 |----------------|------------|-------------|
-| `title`         | `string`   | Main heading text displayed in the banner. |
 | `subtitle`      | `string`   | Supporting text below the title. |
 | `buttonText`    | `string`   | Text shown on the call-to-action button. |
 | `imageSrc`      | `string`   | Path to the promotional image. |
@@ -53,4 +52,4 @@ Props allow components to be:
 `npm run dev`
 
 
-## Demo Link:
+## Demo Link: https://tanjasav.github.io/M4G2-React-Props/

@@ -1,7 +1,7 @@
-import React from 'react';
+// Determine the base URL for assets
+const base = import.meta.env.BASE_URL;
 
 // Define the props for the PromoBanner component
-
 type PromoBannerProps = {
   title: string;
   subtitle: string;
@@ -15,10 +15,9 @@ type PromoBannerProps = {
 
 // Functional component that renders a promotional banner
 const PromoBanner = ({
-  title = 'Enjoy 20% OFF all pastries!',
   subtitle = 'Soft, buttery layers that taste like home',
   buttonText = 'Shop Now',
-  imageSrc = "/images/PastriesPromo.jpg",
+  imageSrc = `${base}images/PastriesPromo.jpg`,
   buttonColor = '#007E23',
   backgroundColor = '#FFF8F8',// Default background color
   border = '1px solid #E03400',
@@ -28,18 +27,18 @@ const PromoBanner = ({
   // Outer container for the banner
   <div
       className="promotion-item"
-      style={{backgroundColor: '#FFFFFB', margin: 'auto', padding:'32px', maxWidth: '431px', boxSizing: 'border-box', height: '245px'}}> {/* Styles for the outer container, applying background color from props*/}
+      style={{backgroundColor: '#FFFFFB', margin: 'auto', padding:'32px', maxWidth: '431px', boxSizing: 'border-box', height: '245px'}}> 
 
     <div
       style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', border: border, 
-      borderRadius: '8px', height: '181px', boxSizing: 'border-box', gap: '35px', maxWidth: '352px', margin: 'auto', backgroundColor: backgroundColor}}>
+      borderRadius: '8px', height: '181px', boxSizing: 'border-box', gap: '35px', maxWidth: '352px', margin: 'auto', backgroundColor: backgroundColor}}>{/* Styles for the inner container, applying background color from props*/}
       
       {/* Left side: text and button */}
       <div
         style={{width: '205px', padding: '0', height: '100%', marginLeft: '35px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
         <h2
           style={{fontFamily: 'Poppins', fontSize: '19px', fontStyle: 'normal', fontWeight: '500', lineHeight: '100%', margin: '0'}}>
-            {title}
+            Enjoy <span style={{ color: 'red' }}>28%</span> OFF all pastries!
         </h2>
         <p
           style={{fontFamily: 'Poppins', fontSize: '13px', fontWeight: 400, lineHeight: '110%', color: '#333333', marginBottom: '14px'}}>
@@ -48,7 +47,8 @@ const PromoBanner = ({
         <button
           style={{width: '135px', height: '45px', backgroundColor: buttonColor, color:'#ffff', border: 'none', padding: '11px 19.5px', fontSize: '19px', fontWeight: 500,
           lineHeight: '100%', borderRadius: '10px', cursor: 'pointer', transition: 'all 0.3s ease', transform : 'none'}}>
-          {buttonText}
+          {/* Button text from props */}
+          {buttonText} 
         </button>
       </div>
 
